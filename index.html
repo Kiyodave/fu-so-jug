@@ -4,20 +4,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- CDN de Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
-    <nav>
-        div
+    <nav class="bg-dark sticky-top shadow-sm">
+        <!-- navbar  -->
+        <section class="container d-flex justify-content-between align-items-center py-3">
+            <!-- caja para logo o icono -->
+            <div>
+                <img src="https://img.magnific.com/vector-premium/imagen-logotipo-vaso-jugo-pajita_1166763-36062.jpg?semt=ais_test_b&w=740&q=80" alt="Logo" class="rounded-circle" width="50" height="50" style="object-fit: cover;">
+                <p class="text-white fw-bold mb-0">Fuente de soda - Jugueria : Rosita</p>
+            </div>
+
+            <!-- caja para elementos de navegación -->
+            <div class="d-flex gap-4">
+                <a href="" class="text-white text-decoration-none fw-semibold">Inicio</a>
+                <a href="" class="text-white text-decoration-none fw-semibold">Productos</a>
+                <a href="" class="text-white text-decoration-none fw-semibold">Nosotros</a>
+                <a href="" class="btn fw-bold" style="background-color: var(--amarillo-mango); color: #000;">Contacto</a>
+            </div>
+        </section>
     </nav>
 
     <main>
+        <!-- foto grande o carrusel -->
+        <section class="bg-secondary text-white text-center d-flex align-items-center justify-content-center" style="min-height: 40vh;">
+            <div>
+                <!-- Espacio vacío reservado para tu carrusel/foto -->
+                <p class="fs-4">[ Aquí va el carrusel o foto grande ]</p>
+            </div>
+        </section>
+
+        <!-- nuestros productos -->
+        <section class="container py-5">
+            <div>
+                <!-- Título principal -->
+                <h1 class="text-center fw-bold mb-5 text-fucsia">Nuestros productos</h1>
+                
+                <!-- Fila 1: Jugos (Fondo Mango) -->
+                <div class="row align-items-center fila-jugos shadow-sm rounded-4 p-4 mb-4">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <img src="https://img.magnific.com/fotos-premium/arco-iris-batidos-sandia-papaya-mango-espinaca-fruta-dragon-batidos-jugos-bebidas-bebidas-variedad-frutas-frescas-mesa-madera_442337-92076.jpg?w=360" alt="" class="img-fluid rounded-3 w-100" style="height: 300px; object-fit: cover;">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="fw-bold text-mango">Variedad de jugos</h2>
+                        <p class="text-muted">Tenemos una amplia variedad de jugos naturales. Entre ellos se pueden combinar frutas y leche. Contamos con las siguientes frutas:</p>
+                        <ul class="list-inline">
+                            <li class="list-inline-item badge mb-1 fs-6" style="background-color: var(--naranja-papaya);">Papaya</li>
+                            <li class="list-inline-item badge mb-1 fs-6" style="background-color: var(--amarillo-mango); color: #000;">Piña</li>
+                            <li class="list-inline-item badge bg-warning text-dark mb-1 fs-6">Plátano</li>
+                            <li class="list-inline-item badge mb-1 fs-6" style="background-color: var(--fucsia);">Fresa</li>
+                            <li class="list-inline-item badge mb-1 fs-6" style="background-color: var(--amarillo-mango); color: #000;">Mango</li>
+                            <li class="list-inline-item badge bg-purple text-dark mb-1 fs-6" style="background-color: #8E24AA; color: white !important;">Arándano</li>
+                            <li class="list-inline-item badge mb-1 fs-6" style="background-color: var(--naranja-papaya);">Naranja</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Fila 2: hamburguesas (Fondo Naranja Papaya) -->
+                <div class="row align-items-center fila-hamburguesas shadow-sm rounded-4 p-4 mb-4 flex-column-reverse flex-md-row">
+                    <div class="col-md-6">
+                        <h2 class="fw-bold text-naranja">Variedad de Sandwiches y Hamburguesas </h2>
+                        <p class="text-muted">Disfruta de nuestra deliciosa variedad de sandwiches y hamburguesas, hechas con ingredientes frescos y de gran sabor.</p>
+                        <p class="fw-semibold">Contamos con sandwiches como:</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent border-0 ps-0 text-dark">🥪 Sandwich de Pollo deshilachado</li>
+                            <li class="list-group-item bg-transparent border-0 ps-0 text-dark">🍔 Hamburguesas de pollo, carne, carne artesanal</li>
+                            <li class="list-group-item bg-transparent border-0 ps-0 text-dark">🌭 Hamburguesa de chorizo</li>
+                            <li class="list-group-item bg-transparent border-0 ps-0 text-dark">👑 Hamburguesas Royal (huevo y queso adicional)</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <img src="https://www.mercadonegro.pe/wp-content/uploads/2019/10/hamburgues-2017_07_11_125926.jpg" alt="" class="img-fluid rounded-3 w-100" style="height: 300px; object-fit: cover;">
+                    </div>
+                </div>
+
+                <!-- Fila 3: kekes, empanadas (Fondo Fucsia Suave) -->
+                <div class="row align-items-center fila-postres shadow-sm rounded-4 p-4 mb-4">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <div class="d-flex gap-2 h-100">
+                            <!-- Tus 4 imágenes intactas -->
+                            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlRumgOxKO9RkLCTAM4W2aQJR4o2YyaJB-rZVhpc3y-8Lfdkg-eV0mh6hNDtzsiSOv4FPq0LitClCaXggBZ6DAt6BqKa1lZATONEITpDLAgxJC5G__zg0WEmYRiZEe1hF4Uesu5=s508-k-no" alt="" class="img-fluid rounded-3 w-25 bg-light border" style="height: 150px; object-fit: cover;">
+                            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlO_HCvSVHXWnxqqgs-M1FBcU9iAtUCAp95NnFfDUKm_kZ1nrgcEbDhl6YoL6dpsTv4B9jSA-rK2pTxNFuAEcQe9EGWsDlRWerP6QUlZeXgDIImRp14kbKLBv-o3Lxtdlh3kFv9FQ=s846-k-no" alt="" class="img-fluid rounded-3 w-25 bg-light border" style="height: 150px; object-fit: cover;">
+                            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlHcNmtKoZeXCfxOQvApZcgy4O7d72YdA1xZQoR4dYuok1FXTfhmHQG6JcJ2gd6UzvzDjY59OBCvLIpP0y2nTc65pI4mNmH0_m4Xip0h2Y5CWdcFh1aAPvDuYaW24WH94EAIN5l-g=s846-k-no" alt="" class="img-fluid rounded-3 w-25 bg-light border" style="height: 150px; object-fit: cover;">
+                            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnJAGuuAb0t9aNAHwKEIuWA6qPL_lA39lGK02hCCiCBSJAhQu66-zP1ZbXtCGg-dlHmt4R0YnbWRJfMvA5JCiooSrp_9Y5M0TEfd96GLIMCcQ9fw1CKXdyoSZ5G2cExLzA8SC83=s483-k-no" alt="" class="img-fluid rounded-3 w-25 bg-light border" style="height: 150px; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="fw-bold text-fucsia">Postres, Kekes y Empanadas caseros!</h2>
+                        <p class="text-muted">Prueba nuestros deliciosos postres, kekes, empanadas y otros más hechos en casa para obtener ese sabor único deseado por el cual nos diferencia! </p>
+                        <p class="fw-semibold">Nuestros postres para adquirir tales como:</p>
+                        <ul class="row list-unstyled">
+                            <li class="col-6 mb-1 text-dark">✔️ Keke de naranja</li>
+                            <li class="col-6 mb-1 text-dark">✔️ Keke marmoleado</li>
+                            <li class="col-6 mb-1 text-dark">✔️ Keke de chocolate</li>
+                            <li class="col-6 mb-1 text-dark">✔️ Chifon</li>
+                            <li class="col-6 mb-1 text-dark">✔️ Empanadas de carne</li>
+                            <li class="col-6 mb-1 text-dark">✔️ Empanadas de pollo</li>
+                            <li class="col-6 mb-1 text-dark">✔️ Alfajores</li>
+                            <li class="col-6 mb-1 text-dark">✔️ Pie de manzana</li>
+                            <li class="col-6 mb-1 text-dark">✔️ Gelatinas</li>
+                            <li class="col-6 mb-1 text-dark">✔️ Leche asada</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Fila 4: ensaladas de frutas (Fondo Fresco Suave) -->
+                <div class="row align-items-center fila-ensaladas shadow-sm rounded-4 p-4 mb-4 flex-column-reverse flex-md-row">
+                    <div class="col-md-6">
+                        <h2 class="fw-bold" style="color: #00897B;">Ensaladas de Frutas!</h2>
+                        <p class="text-muted fs-5">Disfruta de nuestras refrescantes ensaladas de frutas, hechas con ingredientes frescos y de temporada.</p>
+                    </div>
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <div class="d-flex gap-2 h-100">
+                            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl6bTpsVoyGJDG1srXVO20IjuXkFwMR285d2lkwyvnUkxC837h6PCzngwSce2hVOnplGQrN4QAsL_WBQgp8PgoxDcCGKVNw31fwc8Ilo-Yrfn8ZO5ZzvEB-Tc7PyhLl9o4f515v=s563-k-no" alt="" class="img-fluid rounded-3 w-50" style="height: 250px; object-fit: cover;">
+                            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn3IjtpU6ZVmwwgLmyk82juvFPrqjzeIAyAaha1D_EQ0i6TA-sxy6-ttdqUlvPVeLoL5I4lOohZLraUp44VxaEzsWDp9QhHCPBBrxaspsw6ywpJLiisRL4QwyBNRh2zMc2lv1rJXw=w203-h153-k-no" alt="" class="img-fluid rounded-3 w-50" style="height: 250px; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sabías Qué (Tarjetas con Imagen) -->
+        <section class="py-5 mt-4" style="background-color: #FFF5E1;">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold text-naranja display-5">¿Sabías qué...? 💡</h2>
+                    <p class="text-muted fs-5">Descubre el poder oculto de nuestras frutas y cómo combinarlas para potenciar tu salud diaria.</p>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Tarjeta 1: Papaya + Piña -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm rounded-4">
+                            <!-- Espacio para tu imagen (Agrega tu URL en el src) -->
+                            <img src="https://7diasdesabor.com/wp-content/uploads/2024/01/BEBIDA.jpg" alt="Papaya y Piña" class="card-img-top rounded-top-4 bg-light" style="height: 200px; object-fit: cover; border-bottom: 2px solid var(--naranja-papaya);">
+                            
+                            <div class="card-body p-4 text-center">
+                                <h4 class="fw-bold text-naranja">El Reseteo Digestivo</h4>
+                                <p class="text-muted mb-0">
+                                    La combinación de la <strong>papaína</strong> (papaya) y la <strong>bromelina</strong> (piña) crea una sinergia increíble. Juntas desinflaman el intestino al instante, aceleran la digestión de proteínas pesadas y actúan como un poderoso diurético natural. ¡Ideal después de un almuerzo contundente!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2: Arándano + Fresa -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm rounded-4">
+                            <!-- Espacio para tu imagen (Agrega tu URL en el src) -->
+                            <img src="https://campograndeperu.com/wp-content/uploads/2024/03/jugo-de-fresas-con-arandanos.jpg" alt="Frutos Rojos" class="card-img-top rounded-top-4 bg-light" style="height: 200px; object-fit: cover; border-bottom: 2px solid var(--fucsia);">
+                            
+                            <div class="card-body p-4 text-center">
+                                <h4 class="fw-bold text-fucsia">Escudo Neuronal</h4>
+                                <p class="text-muted mb-0">
+                                    Juntar los potentes antioxidantes de los arándanos con la vitamina C de las fresas hace mucho más que cuidar tu piel. Esta mezcla bloquea los radicales libres, retrasa el envejecimiento celular y, según estudios, <strong>¡mejora la conexión entre tus neuronas y estimula la memoria!</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3: Plátano + Mango -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm rounded-4">
+                            <!-- Espacio para tu imagen (Agrega tu URL en el src) -->
+                            <img src="https://comedelahuerta.com/wp-content/uploads/2020/10/batido-de-platano-y-mango.jpg" alt="Plátano y Mango" class="card-img-top rounded-top-4 bg-light" style="height: 200px; object-fit: cover; border-bottom: 2px solid var(--amarillo-mango);">
+                            
+                            <div class="card-body p-4 text-center">
+                                <h4 class="fw-bold text-mango">El Cóctel de la Felicidad</h4>
+                                <p class="text-muted mb-0">
+                                    ¿Día estresante? El plátano es altísimo en <em>triptófano</em> y el mango desborda <em>vitamina B6</em>. Al consumirlos juntos en un jugo, tu cerebro utiliza estos nutrientes para producir <strong>serotonina</strong> de forma natural, reduciendo la ansiedad y mejorando tu estado de ánimo en minutos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     </main>
 
-    <footer>
-
+    <footer class="bg-dark text-white py-5 mt-auto text-center">
+        <!-- Espacio reservado para tu contenido -->
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

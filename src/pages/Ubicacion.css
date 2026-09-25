@@ -117,9 +117,40 @@
   padding: 0;
 }
 
-/* RESPONSIVE */
+/* ── RESPONSIVE TABLET ── */
 @media (max-width: 860px) {
   .ubicacion-grid { grid-template-columns: 1fr; }
   .ubicacion-mapa { position: static; }
-  .mapa-wrapper   { height: 340px; }
+  .mapa-wrapper   { height: 380px; }
+}
+
+/* ── RESPONSIVE MOBILE ── */
+@media (max-width: 600px) {
+  .ubicacion-grid { gap: 1.5rem; }
+
+  .ubi-card {
+    padding: 1.1rem 1rem;
+    gap: 1rem;
+  }
+
+  .ubi-card__icon {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+  }
+
+  .ubi-card__title { font-size: 0.78rem; }
+  .ubi-card__text  { font-size: 0.9rem; }
+
+  .horario-dia,
+  .horario-hora { font-size: 0.85rem; padding: 0.5rem 0; }
+
+  /* Map fills more screen vertically on mobile */
+  .mapa-wrapper { height: 300px; border-radius: var(--radius-md); }
+}
+
+/* ── SMALL MOBILE ── */
+@media (max-width: 380px) {
+  .mapa-wrapper { height: 260px; }
+  .ubi-card     { padding: 1rem 0.875rem; }
 }

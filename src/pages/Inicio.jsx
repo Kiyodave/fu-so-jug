@@ -304,6 +304,132 @@ export default function Inicio() {
         </div>
       </section>
 
+      {/* ── GALERÍA ── */}
+      {/* 📸 REEMPLAZA las URLs con tus fotos reales (Google Fotos, Drive, etc.) */}
+      <section className="galeria-section section-pad">
+        <div className="container text-center">
+          <span className="title-pill pill-naranja">📸 Galería</span>
+          <h2 className="section-title">Así se ve <span className="text-naranja">Rosita</span></h2>
+          <div className="divider divider-mango" />
+          <p className="section-subtitle">Un vistazo a nuestros jugos, postres y el ambiente que te espera.</p>
+          <div className="galeria-grid">
+            {[
+              {
+                url: 'https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlRumgOxKO9RkLCTAM4W2aQJR4o2YyaJB-rZVhpc3y-8Lfdkg-eV0mh6hNDtzsiSOv4FPq0LitClCaXggBZ6DAt6BqKa1lZATONEITpDLAgxJC5G__zg0WEmYRiZEe1hF4Uesu5=s508-k-no',
+                alt: 'Postres caseros de Rosita',
+                label: 'Postres 🍰',
+                grande: true,
+              },
+              {
+                url: 'https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl6bTpsVoyGJDG1srXVO20IjuXkFwMR285d2lkwyvnUkxC837h6PCzngwSce2hVOnplGQrN4QAsL_WBQgp8PgoxDcCGKVNw31fwc8Ilo-Yrfn8ZO5ZzvEB-Tc7PyhLl9o4f515v=s563-k-no',
+                alt: 'Ensalada de frutas',
+                label: 'Ensalada de frutas 🍓',
+                grande: false,
+              },
+              {
+                url: 'https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlO_HCvSVHXWnxqqgs-M1FBcU9iAtUCAp95NnFfDUKm_kZ1nrgcEbDhl6YoL6dpsTv4B9jSA-rK2pTxNFuAEcQe9EGWsDlRWerP6QUlZeXgDIImRp14kbKLBv-o3Lxtdlh3kFv9FQ=s846-k-no',
+                alt: 'Kekes de Rosita',
+                label: 'Kekes artesanales 🍊',
+                grande: false,
+              },
+              {
+                url: 'https://img.magnific.com/fotos-premium/arco-iris-batidos-sandia-papaya-mango-espinaca-fruta-dragon-batidos-jugos-bebidas-bebidas-variedad-frutas-frescas-mesa-madera_442337-92076.jpg?w=600',
+                alt: 'Jugos naturales',
+                label: 'Jugos naturales 🥤',
+                grande: false,
+              },
+              {
+                url: 'https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn3IjtpU6ZVmwwgLmyk82juvFPrqjzeIAyAaha1D_EQ0i6TA-sxy6-ttdqUlvPVeLoL5I4lOohZLraUp44VxaEzsWDp9QhHCPBBrxaspsw6ywpJLiisRL4QwyBNRh2zMc2lv1rJXw=w203-h153-k-no',
+                alt: 'Ensalada de frutas variada',
+                label: 'Frutas frescas 🥭',
+                grande: false,
+              },
+            ].map((foto, i) => (
+              <div key={i} className={`galeria-item ${foto.grande ? 'galeria-item--grande' : ''}`}>
+                <img src={foto.url} alt={foto.alt} loading="lazy" />
+                <div className="galeria-item__overlay">
+                  <span className="galeria-item__label">{foto.label}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── HORARIOS ── */}
+      {(() => {
+        const ahora = new Date();
+        const hora = ahora.getHours() + ahora.getMinutes() / 60;
+        const abierto = hora >= 18.5 || hora < 0; // 6:30pm = 18.5h; cierra a medianoche
+        const diasSemana = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+        const hoy = diasSemana[ahora.getDay()];
+        const dias = [
+          { dia: 'Lunes',     horario: '6:30 pm – 12:00 am' },
+          { dia: 'Martes',    horario: '6:30 pm – 12:00 am' },
+          { dia: 'Miércoles', horario: '6:30 pm – 12:00 am' },
+          { dia: 'Jueves',    horario: '6:30 pm – 12:00 am' },
+          { dia: 'Viernes',   horario: '6:30 pm – 12:00 am' },
+          { dia: 'Sábado',    horario: '6:30 pm – 12:00 am' },
+          { dia: 'Domingo',   horario: '6:30 pm – 12:00 am' },
+        ];
+        return (
+          <section className="horarios-section section-pad">
+            <div className="container">
+              <div className="horarios-inner">
+
+                {/* TEXTO */}
+                <div className="horarios-text animate-fade-up">
+                  <span className="title-pill pill-verde">🕐 Horarios</span>
+                  <h2 className="section-title">¿Cuándo <span className="text-verde">nos visitas?</span></h2>
+                  <div className="divider divider-verde" style={{ margin: '1rem 0 1.5rem' }} />
+                  <p style={{ color: 'var(--text-muted)', lineHeight: 1.7, marginBottom: '1.5rem' }}>
+                    Estamos abiertos <strong>todos los días de la semana</strong>, listos para recibirte con el jugo que más te gusta.
+                  </p>
+
+                  {/* ESTADO ACTUAL */}
+                  <div className={`estado-badge ${abierto ? 'estado-badge--open' : 'estado-badge--closed'}`}>
+                    <span className="estado-dot" />
+                    <span>{abierto ? '🟢 Abierto ahora · Hasta las 12:00 am' : '🔴 Cerrado · Abrimos hoy a las 6:30 pm'}</span>
+                  </div>
+
+                  <a href="https://maps.app.goo.gl/ZfzrqrF5TbmFc7tT6" target="_blank" rel="noreferrer"
+                     className="btn btn-primary" style={{ marginTop: '1.75rem', display: 'inline-flex' }}>
+                    📍 Cómo llegar
+                  </a>
+                </div>
+
+                {/* TABLA */}
+                <div className="horarios-tabla glass-card animate-fade-up animate-delay-2">
+                  <div className="horarios-tabla__header">
+                    <span>📅 Horario semanal</span>
+                  </div>
+                  <table className="horario-tbl">
+                    <tbody>
+                      {dias.map(({ dia, horario }) => {
+                        const esHoy = dia === hoy;
+                        return (
+                          <tr key={dia} className={`horario-tbl__row ${esHoy ? 'horario-tbl__row--hoy' : ''}`}>
+                            <td className="horario-tbl__dia">
+                              {esHoy && <span className="hoy-pill">HOY</span>}
+                              {dia}
+                            </td>
+                            <td className="horario-tbl__horario">{horario}</td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                  <div className="horarios-tabla__footer">
+                    Atención todos los días sin excepción 🎉
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+        );
+      })()}
+
       {/* ── CTA FINAL ── */}
       <section className="cta-section">
         <div className="blob cta__blob-1" />

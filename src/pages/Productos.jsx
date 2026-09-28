@@ -1,10 +1,20 @@
+import {
+  CupSoda,
+  UtensilsCrossed,
+  CakeSlice,
+  Salad,
+  Sparkles,
+  Check,
+  Calendar,
+  ShoppingBag
+} from 'lucide-react'
 import './Productos.css'
 
 const categorias = [
   {
     id: 'jugos',
     titulo: 'Jugos & Batidos Naturales',
-    emoji: '🥤',
+    icon: CupSoda,
     pill: 'pill-mango',
     accent: 'var(--mango-dark)',
     bg: 'var(--mango-light)',
@@ -30,7 +40,7 @@ const categorias = [
   {
     id: 'hamburguesas',
     titulo: 'Hamburguesas & Sandwiches',
-    emoji: '🍔',
+    icon: UtensilsCrossed,
     pill: 'pill-naranja',
     accent: 'var(--naranja)',
     bg: 'var(--naranja-light)',
@@ -39,20 +49,20 @@ const categorias = [
     descripcion: 'Preparadas al momento con pan fresco y los ingredientes que más le gustan al barrio. Jugosas, contundentes y con ese sabor que no se olvida.',
     extra: null,
     items: [
-      { name: 'Sandwich de pollo deshilachado', icon: '🐔' },
-      { name: 'Hamburguesa de pollo',           icon: '🍗' },
-      { name: 'Hamburguesa de carne',           icon: '🥩' },
-      { name: 'Hamburguesa artesanal',          icon: '🌟' },
-      { name: 'Hamburguesa de chorizo',         icon: '🌶️' },
-      { name: 'Hamburguesa Royal (huevo + queso)', icon: '👑' },
-      { name: 'Pan con chicharrón',             icon: '🥖' },
+      { name: 'Sandwich de pollo deshilachado' },
+      { name: 'Hamburguesa de pollo' },
+      { name: 'Hamburguesa de carne' },
+      { name: 'Hamburguesa artesanal' },
+      { name: 'Hamburguesa de chorizo' },
+      { name: 'Hamburguesa Royal (huevo + queso)' },
+      { name: 'Pan con chicharrón' },
     ],
     badges: null,
   },
   {
     id: 'postres',
     titulo: 'Postres, Kekes & Empanadas',
-    emoji: '🍰',
+    icon: CakeSlice,
     pill: 'pill-fucsia',
     accent: 'var(--fucsia)',
     bg: 'var(--fucsia-light)',
@@ -65,23 +75,23 @@ const categorias = [
     descripcion: 'Recetas caseras con el alma de Rosita. Cada keke, empanada y postre es hecho en casa — se nota en el sabor desde el primer bocado.',
     extra: null,
     items: [
-      { name: 'Keke de naranja',   icon: '🍊' },
-      { name: 'Keke marmoleado',   icon: '🌀' },
-      { name: 'Keke de chocolate', icon: '🍫' },
-      { name: 'Chifón',            icon: '☁️' },
-      { name: 'Empanada de carne', icon: '🥩' },
-      { name: 'Empanada de pollo', icon: '🐔' },
-      { name: 'Alfajores',         icon: '🍪' },
-      { name: 'Pie de manzana',    icon: '🍎' },
-      { name: 'Gelatinas',         icon: '💎' },
-      { name: 'Leche asada',       icon: '🥛' },
+      { name: 'Keke de naranja' },
+      { name: 'Keke marmoleado' },
+      { name: 'Keke de chocolate' },
+      { name: 'Chifón' },
+      { name: 'Empanada de carne' },
+      { name: 'Empanada de pollo' },
+      { name: 'Alfajores' },
+      { name: 'Pie de manzana' },
+      { name: 'Gelatinas' },
+      { name: 'Leche asada' },
     ],
     badges: null,
   },
   {
     id: 'ensaladas',
     titulo: 'Ensaladas de Frutas',
-    emoji: '🥗',
+    icon: Salad,
     pill: 'pill-verde',
     accent: 'var(--verde)',
     bg: 'var(--verde-light)',
@@ -93,28 +103,28 @@ const categorias = [
     descripcion: 'Frescura y color en cada cucharada. Frutas de temporada seleccionadas cada día, con granola o yogurt según tu antojo.',
     extra: null,
     items: [
-      { name: 'Ensalada clásica de frutas',     icon: '🍓' },
-      { name: 'Ensalada con granola',           icon: '🌾' },
-      { name: 'Ensalada con yogurt',            icon: '🥛' },
-      { name: 'Ensalada tropical (mango + piña)', icon: '🥭' },
+      { name: 'Ensalada clásica de frutas' },
+      { name: 'Ensalada con granola' },
+      { name: 'Ensalada con yogurt' },
+      { name: 'Ensalada tropical (mango + piña)' },
     ],
     badges: null,
   },
   {
     id: 'especial-finde',
     titulo: 'Especial de Fin de Semana',
-    emoji: '🥔',
+    icon: Sparkles,
     pill: 'pill-naranja',
     accent: 'var(--naranja)',
     bg: 'var(--naranja-light)',
     border: 'var(--naranja)',
     imagen: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Papa_rellena_Peru.jpg/640px-Papa_rellena_Peru.jpg',
-    descripcion: 'Solo los sábados y domingos. La papa rellena de Rosita, doradita por fuera y jugosa por dentro, sale acompañada de ensalada y/o arroz. Un clásico peruano que el barrio ya espera cada fin de semana.',
-    extra: '📅 Disponible únicamente sábados y domingos',
+    descripcion: 'Solo los sábados y domingos. La papa rellena de Rosita, doradita por fuera y jugosa por dentro, sale acompañada de ensalada y/o arroz. Un clásico que el barrio ya espera cada fin de semana.',
+    extra: 'Disponible únicamente sábados y domingos',
     items: [
-      { name: 'Papa rellena con ensalada',          icon: '🥗' },
-      { name: 'Papa rellena con arroz',             icon: '🍚' },
-      { name: 'Papa rellena con ensalada y arroz',  icon: '🍽️' },
+      { name: 'Papa rellena con ensalada' },
+      { name: 'Papa rellena con arroz' },
+      { name: 'Papa rellena con ensalada y arroz' },
     ],
     badges: null,
   },
@@ -128,14 +138,19 @@ export default function Productos() {
         <div className="blob page-hero__blob-1" />
         <div className="blob page-hero__blob-2" />
         <div className="container" style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
-          <span className="title-pill pill-naranja">🍽️ Lo que ofrecemos</span>
+          <span className="title-pill pill-naranja" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+            <UtensilsCrossed size={14} /> Lo que ofrecemos
+          </span>
           <h1 className="section-title" style={{ marginTop: '0.5rem' }}>
             Nuestro <span className="text-naranja">Menú</span>
           </h1>
           <div className="divider divider-mango" />
           <p className="section-subtitle" style={{ marginTop: '1rem' }}>
-            Todo hecho con amor, ingredientes frescos y la sazón que solo Rosita sabe dar.
-            Pedidos en local — y sí <strong>hay para llevar</strong> 🛍️
+            Todo hecho con amor, ingredientes frescos y la sazón de Rosita.
+            Pedidos en local — y sí{' '}
+            <strong style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+              hay para llevar <ShoppingBag size={15} />
+            </strong>
           </p>
         </div>
       </section>
@@ -143,70 +158,75 @@ export default function Productos() {
       {/* CATEGORÍAS */}
       <section className="section-pad">
         <div className="container">
-          {categorias.map((cat, idx) => (
-            <div
-              key={cat.id}
-              id={cat.id}
-              className={`producto-row ${idx % 2 !== 0 ? 'producto-row--reverse' : ''}`}
-              style={{ '--accent': cat.accent, '--bg': cat.bg, '--border': cat.border }}
-            >
-              {/* IMAGEN */}
-              <div className="producto-row__img-side">
-                {cat.imagen ? (
-                  <img src={cat.imagen} alt={cat.titulo} className="producto-row__img" />
-                ) : (
-                  <div className="producto-row__img-grid">
-                    {(cat.imagenes || []).slice(0,3).map((src, i) => (
-                      <img key={i} src={src} alt={`${cat.titulo} ${i+1}`} className="producto-row__img-mini" />
-                    ))}
-                  </div>
-                )}
+          {categorias.map((cat, idx) => {
+            const CatIcon = cat.icon
+            return (
+              <div
+                key={cat.id}
+                id={cat.id}
+                className={`producto-row ${idx % 2 !== 0 ? 'producto-row--reverse' : ''}`}
+                style={{ '--accent': cat.accent, '--bg': cat.bg, '--border': cat.border }}
+              >
+                {/* IMAGEN */}
+                <div className="producto-row__img-side">
+                  {cat.imagen ? (
+                    <img src={cat.imagen} alt={cat.titulo} className="producto-row__img" />
+                  ) : (
+                    <div className="producto-row__img-grid">
+                      {(cat.imagenes || []).slice(0,3).map((src, i) => (
+                        <img key={i} src={src} alt={`${cat.titulo} ${i+1}`} className="producto-row__img-mini" />
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* CONTENT */}
+                <div className="producto-row__content">
+                  <span className={`title-pill ${cat.pill}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem' }}>
+                    <CatIcon size={14} /> {cat.titulo}
+                  </span>
+                  <h2 className="producto-row__title">{cat.titulo}</h2>
+                  <p className="producto-row__desc">{cat.descripcion}</p>
+
+                  {/* BADGE ESPECIAL (finde) */}
+                  {cat.extra && (
+                    <div className="producto-finde-badge">
+                      <Calendar size={14} /> {cat.extra}
+                    </div>
+                  )}
+
+                  {/* BADGES (frutas) */}
+                  {cat.badges && (
+                    <div className="producto-row__badges">
+                      {cat.badges.map(b => (
+                        <span
+                          key={b.label}
+                          className="fruit-badge"
+                          style={{ background: b.color, color: b.text }}
+                        >
+                          {b.label}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* LISTA */}
+                  {cat.items && (
+                    <ul className="producto-row__list">
+                      {cat.items.map(item => (
+                        <li key={item.name} className="producto-row__list-item">
+                          <span className="producto-row__list-bullet">
+                            <Check size={13} strokeWidth={2.6} />
+                          </span>
+                          <span>{item.name}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
-
-              {/* CONTENT */}
-              <div className="producto-row__content">
-                <span className={`title-pill ${cat.pill}`}>
-                  {cat.emoji} {cat.titulo}
-                </span>
-                <h2 className="producto-row__title">{cat.titulo}</h2>
-                <p className="producto-row__desc">{cat.descripcion}</p>
-
-                {/* BADGE ESPECIAL (finde) */}
-                {cat.extra && (
-                  <div className="producto-finde-badge">
-                    {cat.extra}
-                  </div>
-                )}
-
-                {/* BADGES (frutas) */}
-                {cat.badges && (
-                  <div className="producto-row__badges">
-                    {cat.badges.map(b => (
-                      <span
-                        key={b.label}
-                        className="fruit-badge"
-                        style={{ background: b.color, color: b.text }}
-                      >
-                        {b.label}
-                      </span>
-                    ))}
-                  </div>
-                )}
-
-                {/* LISTA */}
-                {cat.items && (
-                  <ul className="producto-row__list">
-                    {cat.items.map(item => (
-                      <li key={item.name} className="producto-row__list-item">
-                        <span className="producto-row__list-icon">{item.icon}</span>
-                        {item.name}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </section>
     </>

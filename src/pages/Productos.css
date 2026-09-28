@@ -134,7 +134,17 @@
   border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-.producto-row__list-icon { font-size: 1rem; flex-shrink: 0; }
+.producto-row__list-bullet {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--crema-2);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
 
 /* BADGE ESPECIAL FIN DE SEMANA */
 .producto-finde-badge {

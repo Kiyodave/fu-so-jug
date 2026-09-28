@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import BottomNav from './components/BottomNav'
 import Inicio from './pages/Inicio'
 import Productos from './pages/Productos'
 import Nosotros from './pages/Nosotros'
@@ -23,6 +24,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <BottomNav />
       </div>
     </BrowserRouter>
   )

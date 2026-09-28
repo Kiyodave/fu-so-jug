@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
+import { CupSoda } from 'lucide-react'
 import './Navbar.css'
 
 const navLinks = [
@@ -29,7 +30,9 @@ export default function Navbar() {
 
         {/* LOGO */}
         <Link to="/" className="navbar__logo">
-          <div className="navbar__logo-icon">🥤</div>
+          <div className="navbar__logo-icon">
+            <CupSoda size={24} color="var(--naranja)" />
+          </div>
           <div className="navbar__logo-text">
             <span className="navbar__logo-name">Rosita</span>
             <span className="navbar__logo-sub">Fuente de Soda & Juguería</span>

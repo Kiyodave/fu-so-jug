@@ -1,4 +1,14 @@
 import { Link } from 'react-router-dom'
+import {
+  CupSoda,
+  MapPin,
+  Mail,
+  Clock,
+  ShoppingBag,
+  Navigation,
+  Heart,
+  ChevronRight
+} from 'lucide-react'
 import './Footer.css'
 
 export default function Footer() {
@@ -20,7 +30,9 @@ export default function Footer() {
             {/* BRAND */}
             <div className="footer__brand">
               <div className="footer__logo">
-                <span className="footer__logo-icon">🥤</span>
+                <span className="footer__logo-icon" style={{ display: 'inline-flex', alignItems: 'center' }}>
+                  <CupSoda size={22} color="var(--naranja)" />
+                </span>
                 <div>
                   <p className="footer__logo-name">Rosita</p>
                   <p className="footer__logo-sub">Juguería & Fuente de Soda</p>
@@ -30,17 +42,17 @@ export default function Footer() {
                 Jugos naturales, postres caseros<br />
                 y sabor de barrio desde marzo 2024.
               </p>
-              {/* Social — solo íconos reales */}
+              {/* Social */}
               <div className="footer__socials">
                 <a href="https://maps.app.goo.gl/ZfzrqrF5TbmFc7tT6" target="_blank" rel="noreferrer"
                    className="footer__social-btn" aria-label="Google Maps"
                    style={{ background: '#EA4335', color: 'white' }}>
-                  📍
+                  <MapPin size={16} />
                 </a>
                 <a href="mailto:andrewsqd4123@gmail.com"
                    className="footer__social-btn" aria-label="Correo"
                    style={{ background: 'var(--fucsia)', color: 'white' }}>
-                  ✉️
+                  <Mail size={16} />
                 </a>
               </div>
             </div>
@@ -57,8 +69,8 @@ export default function Footer() {
                   { to: '/contacto',  label: 'Contacto' },
                 ].map(({ to, label }) => (
                   <li key={to}>
-                    <Link to={to} className="footer__nav-link">
-                      <span className="footer__nav-arrow">→</span> {label}
+                    <Link to={to} className="footer__nav-link" style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+                      <ChevronRight size={13} className="footer__nav-arrow" /> {label}
                     </Link>
                   </li>
                 ))}
@@ -79,8 +91,8 @@ export default function Footer() {
                   'Papa rellena (sáb–dom)',
                 ].map(item => (
                   <li key={item}>
-                    <span className="footer__nav-link" style={{ cursor: 'default' }}>
-                      <span className="footer__nav-arrow">🍓</span> {item}
+                    <span className="footer__nav-link" style={{ cursor: 'default', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+                      <ChevronRight size={13} className="footer__nav-arrow" color="var(--naranja)" /> {item}
                     </span>
                   </li>
                 ))}
@@ -92,23 +104,33 @@ export default function Footer() {
               <h4 className="footer__col-title">Información</h4>
               <ul className="footer__contact">
                 <li>
-                  <span className="footer__contact-icon">📍</span>
-                  <span>Campoy, San Juan de Lurigancho, Lima</span>
+                  <span className="footer__contact-icon" style={{ display: 'inline-flex', alignItems: 'center' }}>
+                    <MapPin size={16} color="var(--naranja)" />
+                  </span>
+                  <span>Campoy, San Juan de Lurigancho</span>
                 </li>
                 <li>
-                  <span className="footer__contact-icon">✉️</span>
+                  <span className="footer__contact-icon" style={{ display: 'inline-flex', alignItems: 'center' }}>
+                    <Mail size={16} color="var(--fucsia)" />
+                  </span>
                   <a href="mailto:andrewsqd4123@gmail.com">andrewsqd4123@gmail.com</a>
                 </li>
                 <li>
-                  <span className="footer__contact-icon">🌙</span>
+                  <span className="footer__contact-icon" style={{ display: 'inline-flex', alignItems: 'center' }}>
+                    <Clock size={16} color="var(--mango-dark)" />
+                  </span>
                   <span>Lun – Dom: 6:30 pm – 12:00 am</span>
                 </li>
                 <li>
-                  <span className="footer__contact-icon">🛍️</span>
+                  <span className="footer__contact-icon" style={{ display: 'inline-flex', alignItems: 'center' }}>
+                    <ShoppingBag size={16} color="var(--verde)" />
+                  </span>
                   <span>Solo en local · Para llevar disponible</span>
                 </li>
                 <li>
-                  <span className="footer__contact-icon">🗺️</span>
+                  <span className="footer__contact-icon" style={{ display: 'inline-flex', alignItems: 'center' }}>
+                    <Navigation size={16} color="var(--naranja)" />
+                  </span>
                   <a href="https://maps.app.goo.gl/ZfzrqrF5TbmFc7tT6" target="_blank" rel="noreferrer">
                     Ver en Google Maps
                   </a>
@@ -120,7 +142,9 @@ export default function Footer() {
           {/* BOTTOM BAR */}
           <div className="footer__bottom">
             <p>© {year} Juguería Rosita. Todos los derechos reservados.</p>
-            <p className="footer__made">Hecho con <span>❤️</span> en Perú 🇵🇪</p>
+            <p className="footer__made" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
+              Hecho con <Heart size={14} color="var(--fucsia)" fill="var(--fucsia)" /> en Lima, Perú
+            </p>
           </div>
         </div>
       </div>

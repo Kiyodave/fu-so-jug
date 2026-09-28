@@ -1,18 +1,29 @@
+import {
+  Leaf,
+  Heart,
+  Moon,
+  Users,
+  Sparkles,
+  CakeSlice,
+  CupSoda,
+  Globe,
+  MapPin
+} from 'lucide-react'
 import './Nosotros.css'
 
 const valores = [
-  { emoji: '🥭', titulo: 'Ingredientes Frescos', desc: 'Seleccionamos las mejores frutas del mercado cada mañana. Sin aditivos, sin conservantes. Solo lo mejor de la naturaleza.' },
-  { emoji: '❤️', titulo: 'Hecho con Amor', desc: 'Cada receta lleva el alma de Rosita y su familia. Un sabor que solo el cariño familiar puede crear, y que el barrio ya reconoce.' },
-  { emoji: '🌙', titulo: 'Horario Nocturno', desc: 'Atendemos de lunes a domingo de 6:30 pm a 12:00 am. Porque el antojo llega cuando llega, ¡y Rosita está ahí!' },
-  { emoji: '♻️', titulo: 'Barrio y Comunidad', desc: 'Somos de Campoy, SJL. Priorizamos ingredientes locales y queremos crecer junto a nuestra comunidad.' },
+  { icon: Leaf, titulo: 'Ingredientes Frescos', desc: 'Seleccionamos las mejores frutas del mercado cada mañana. Sin aditivos ni conservantes. Solo lo mejor de la naturaleza.' },
+  { icon: Heart, titulo: 'Hecho con Cariño', desc: 'Cada receta lleva el alma de Rosita y su familia. Un sabor que solo el calor de casa puede lograr, y que el barrio ya reconoce.' },
+  { icon: Moon, titulo: 'Atención Nocturna', desc: 'Atendemos de lunes a domingo de 6:30 pm a 12:00 am. Porque el antojo llega cuando llega, ¡y Rosita siempre te espera!' },
+  { icon: Users, titulo: 'Barrio y Comunidad', desc: 'Somos de Campoy, SJL. Apostamos por el barrio y nos encanta atender a cada vecino con la misma amabilidad de siempre.' },
 ]
 
 const timeline = [
-  { year: 'Mar 2024', evento: 'En una charla casual entre hijos y su madre, nació la idea. Rosita abre su juguería en Campoy, SJL, con ilusión y recetas propias.', emoji: '🥤' },
-  { year: 'Jun 2024', evento: 'La fama de los jugos naturales y combinados se riega de boca en boca por el barrio. ¡La gente repite!', emoji: '🧡' },
-  { year: 'Sep 2024', evento: 'Incorporamos hamburguesas artesanales, kekes, empanadas y postres caseros al menú.', emoji: '🍰' },
-  { year: 'Ene 2025', evento: 'Más de 50 combinaciones de jugos disponibles. La carta nunca para de crecer.', emoji: '✨' },
-  { year: 'Hoy', evento: '¡Ya estamos en digital! Gracias por visitarnos. La familia Rosita sigue creciendo 💫', emoji: '🌐' },
+  { year: 'Mar 2024', evento: 'En una charla casual entre hijos y su madre, nació la idea. Rosita abre su juguería en Campoy con ilusión y recetas propias.', icon: Sparkles },
+  { year: 'Jun 2024', evento: 'La fama de los jugos naturales y batidos se riega de boca en boca por el barrio. ¡Los vecinos repiten!', icon: Heart },
+  { year: 'Sep 2024', evento: 'Incorporamos hamburguesas artesanales, kekes de la casa, empanadas y postres caseros al menú.', icon: CakeSlice },
+  { year: 'Ene 2025', evento: 'Más de 50 combinaciones de jugos disponibles. La variedad y calidad crecen cada semana.', icon: CupSoda },
+  { year: 'Hoy', evento: '¡Ya estamos en digital! Gracias por visitarnos. La familia Rosita sigue creciendo junto a ti.', icon: Globe },
 ]
 
 export default function Nosotros() {
@@ -29,7 +40,7 @@ export default function Nosotros() {
           </h1>
           <div className="divider divider-fucsia" />
           <p className="section-subtitle" style={{ marginTop: '1rem' }}>
-            Una familia limeña con pasión por los sabores naturales y la hospitalidad peruana.
+            Una familia con pasión por los sabores naturales, la buena sazón y la atención de corazón.
           </p>
         </div>
       </section>
@@ -45,18 +56,20 @@ export default function Nosotros() {
                   alt="Jugos Rosita"
                   className="nosotros-img-main"
                 />
-                <div className="nosotros-img-badge glass-card">
-                  <span style={{ fontSize: '2rem' }}>🇵🇪</span>
+                <div className="nosotros-img-badge glass-card" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+                  <MapPin size={24} color="var(--fucsia)" />
                   <div>
-                    <p style={{ fontWeight: 800, fontSize: '1rem', lineHeight: 1 }}>Lima, Perú</p>
-                    <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Desde 1998</p>
+                    <p style={{ fontWeight: 800, fontSize: '1rem', lineHeight: 1 }}>Campoy, SJL</p>
+                    <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Desde marzo 2024</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="nosotros-story__text animate-fade-up">
-              <span className="title-pill pill-fucsia">🧡 Nuestra historia</span>
+              <span className="title-pill pill-fucsia" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+                <Heart size={14} /> Nuestra historia
+              </span>
               <h2 style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 800, margin: '0.75rem 0 1.25rem', color: 'var(--dark)' }}>
                 Un sueño que nació de una conversación en familia
               </h2>
@@ -65,18 +78,18 @@ export default function Nosotros() {
                 los hijos y su madre, surgió casi de la nada la idea de montar una juguería.
                 Lo que comenzó como una ocurrencia casual se convirtió rápidamente en un plan serio,
                 y con mucha determinación abrieron las puertas de <strong>Juguería Rosita</strong>
-                en el corazón de <strong>Campoy, San Juan de Lurigancho</strong>.
+                en el corazón de <strong>Campoy</strong>.
               </p>
               <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '1rem' }}>
                 La carta empezó sencilla: jugos naturales y batidos frescos. Pero con el entusiasmo
                 del barrio y el sabor que Rosita pone en cada preparación, pronto se sumaron
-                las hamburguesas artesanales, los kekes de naranja, las empanadas y los postres
-                hechos en casa. <em>La gente repite, y eso lo dice todo</em>.
+                las hamburguesas artesanales, los kekes caseros, las empanadas y los postres
+                horneados en casa. <em>La gente repite, y eso lo dice todo</em>.
               </p>
               <p style={{ color: 'var(--text-muted)', lineHeight: 1.8 }}>
-                Llevamos poco más de un año en el camino, pero ya somos parte del barrio.
-                Atendemos de lunes a domingo de <strong>6:30 pm a 12:00 am</strong>, porque
-                sabemos que el antojo bueno llega a cualquier hora de la noche. 🌙
+                Llevamos un camino lleno de aprendizaje y cariño, siendo parte del día a día del vecindario.
+                Atendemos de lunes a domingo de <strong>6:30 pm a 12:00 am</strong>, porque
+                sabemos que el antojo bueno llega a cualquier hora de la noche.
               </p>
             </div>
           </div>
@@ -90,13 +103,28 @@ export default function Nosotros() {
           <h2 className="section-title" style={{ marginTop: '0.5rem' }}>Lo que nos mueve</h2>
           <div className="divider divider-mango" />
           <div className="valores-grid" style={{ marginTop: '3rem' }}>
-            {valores.map(v => (
-              <div key={v.titulo} className="valor-card glass-card">
-                <span className="valor-card__emoji">{v.emoji}</span>
-                <h3 className="valor-card__title">{v.titulo}</h3>
-                <p className="valor-card__desc">{v.desc}</p>
-              </div>
-            ))}
+            {valores.map(v => {
+              const ValIcon = v.icon
+              return (
+                <div key={v.titulo} className="valor-card glass-card">
+                  <span className="valor-card__icon-wrap" style={{
+                    width: 48,
+                    height: 48,
+                    borderRadius: '50%',
+                    background: 'var(--naranja-light)',
+                    color: 'var(--naranja)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 1rem'
+                  }}>
+                    <ValIcon size={24} />
+                  </span>
+                  <h3 className="valor-card__title">{v.titulo}</h3>
+                  <p className="valor-card__desc">{v.desc}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -110,19 +138,34 @@ export default function Nosotros() {
           </h2>
           <div className="divider divider-mango" />
           <div className="timeline">
-            {timeline.map((item, i) => (
-              <div
-                key={item.year}
-                className={`timeline-item ${i % 2 === 0 ? 'timeline-item--left' : 'timeline-item--right'}`}
-              >
-                <div className="timeline-card glass-card">
-                  <span className="timeline-card__emoji">{item.emoji}</span>
-                  <p className="timeline-card__year">{item.year}</p>
-                  <p className="timeline-card__event">{item.evento}</p>
+            {timeline.map((item, i) => {
+              const TimeIcon = item.icon
+              return (
+                <div
+                  key={item.year}
+                  className={`timeline-item ${i % 2 === 0 ? 'timeline-item--left' : 'timeline-item--right'}`}
+                >
+                  <div className="timeline-card glass-card">
+                    <span style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      width: 36,
+                      height: 36,
+                      borderRadius: '50%',
+                      background: 'var(--naranja-light)',
+                      color: 'var(--naranja)',
+                      marginBottom: '0.5rem'
+                    }}>
+                      <TimeIcon size={18} />
+                    </span>
+                    <p className="timeline-card__year">{item.year}</p>
+                    <p className="timeline-card__event">{item.evento}</p>
+                  </div>
+                  <div className="timeline-dot" />
                 </div>
-                <div className="timeline-dot" />
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>

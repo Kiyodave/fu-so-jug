@@ -200,6 +200,10 @@
     padding-bottom: 2rem;
   }
 
+  .footer__col--hide-mobile {
+    display: none;
+  }
+
   /* On mobile: brand section slightly more compact */
   .footer__logo-icon { width: 42px; height: 42px; font-size: 1.3rem; }
   .footer__logo-name { font-size: 1.1rem; }

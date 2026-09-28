@@ -3,7 +3,7 @@
    Global Design System — Mobile-First Enhanced
 ─────────────────────────────────────────────── */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Righteous&display=swap');
 
 /* ── TOKENS ── */
 :root {
@@ -51,8 +51,8 @@ img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 ul, ol { list-style: none; }
 
-h1,h2,h3,h4,h5 { font-family: 'Outfit', sans-serif; line-height: 1.2; }
-.display-title  { font-family: 'Playfair Display', serif; font-style: italic; }
+h1,h2,h3,h4,h5 { font-family: 'Righteous', cursive; font-weight: 400; line-height: 1.2; letter-spacing: 0.02em; }
+.display-title  { font-family: 'Righteous', cursive; font-weight: 400; }
 
 .container {
   width: 100%;
@@ -116,7 +116,7 @@ h1,h2,h3,h4,h5 { font-family: 'Outfit', sans-serif; line-height: 1.2; }
 .btn-mango:active { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(255,179,0,0.5); }
 
 /* ── TYPOGRAPHY ── */
-.section-title    { font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 800; margin-bottom: 1rem; }
+.section-title    { font-family: 'Righteous', cursive; font-weight: 400; font-size: clamp(1.75rem, 5vw, 3rem); margin-bottom: 1rem; }
 .section-subtitle { font-size: 1rem; color: var(--text-muted); max-width: 560px; margin: 0 auto 3rem; line-height: 1.7; }
 
 .title-pill {

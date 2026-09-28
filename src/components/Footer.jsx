@@ -58,7 +58,7 @@ export default function Footer() {
             </div>
 
             {/* QUICK LINKS */}
-            <div className="footer__col">
+            <div className="footer__col footer__col--hide-mobile">
               <h4 className="footer__col-title">Navegación</h4>
               <ul className="footer__nav">
                 {[
@@ -78,7 +78,7 @@ export default function Footer() {
             </div>
 
             {/* PRODUCTS */}
-            <div className="footer__col">
+            <div className="footer__col footer__col--hide-mobile">
               <h4 className="footer__col-title">Nuestros Sabores</h4>
               <ul className="footer__nav">
                 {[

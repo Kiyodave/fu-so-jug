@@ -4,16 +4,16 @@ import { CupSoda } from 'lucide-react'
 import './Navbar.css'
 
 const navLinks = [
-  { to: '/',          label: 'Inicio' },
+  { to: '/', label: 'Inicio' },
   { to: '/productos', label: 'Productos' },
-  { to: '/nosotros',  label: 'Nosotros' },
+  { to: '/nosotros', label: 'Nosotros' },
   { to: '/ubicacion', label: 'Ubicación' },
 ]
 
 export default function Navbar() {
-  const [scrolled, setScrolled]   = useState(false)
-  const [menuOpen, setMenuOpen]   = useState(false)
-  const location                  = useLocation()
+  const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -34,7 +34,7 @@ export default function Navbar() {
             <CupSoda size={24} color="var(--naranja)" />
           </div>
           <div className="navbar__logo-text">
-            <span className="navbar__logo-name">Rosita</span>
+            <span className="navbar__logo-name">Juguería Rosita</span>
             <span className="navbar__logo-sub">Fuente de Soda & Juguería</span>
           </div>
         </Link>

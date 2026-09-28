@@ -87,9 +87,9 @@ export default function Nosotros() {
                 horneados en casa. <em>La gente repite, y eso lo dice todo</em>.
               </p>
               <p style={{ color: 'var(--text-muted)', lineHeight: 1.8 }}>
-                Llevamos un camino lleno de aprendizaje y cariño, siendo parte del día a día del vecindario.
-                Atendemos de lunes a domingo de <strong>6:30 pm a 12:00 am</strong>, porque
-                sabemos que el antojo bueno llega a cualquier hora de la noche.
+                Llevamos un camino lleno de aprendizaje, siendo parte del día a día del vecindario.
+                Y como toda buena experiencia, la nuestra viene con una banda sonora inolvidable: <strong>los mejores clásicos del rock y pop de los 80s y 90s</strong> sonando siempre de fondo.
+                Atendemos de lunes a domingo de <strong>6:30 pm a 12:00 am</strong>. Ven por el sabor casero, ¡quédate por la buena música!
               </p>
             </div>
           </div>

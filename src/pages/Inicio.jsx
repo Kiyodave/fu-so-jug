@@ -138,7 +138,6 @@ export default function Inicio() {
                 alt="Variedad de jugos Rosita"
                 className="hero__img"
               />
-              {/* Badge flotante +50 combinaciones */}
 
             </div>
           </div>
